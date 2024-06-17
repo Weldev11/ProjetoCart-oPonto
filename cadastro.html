@@ -29,13 +29,29 @@
         <label for="telefone">Telefone:</label>
         <input type="text" id="telefone" name="telefone" required><br>
 
+        <label for="imagem">Imagem:</label>
+        <input type="file" id="imagem" name="imagem"><br>
+
+        <button type="button" onclick="enviarDadosParaFirebase()">Enviar Dados</button>
+    </form>
+
+    <h1>Consultar Funcionario</h1>
+    <form>
         <label for="perfil">Perfil:</label>
         <select id="perfil" name="perfil">
             <option value="user">Usuário Comum</option>
             <option value="admin">Administrador</option>
         </select><br>
 
-        <button type="submit">Cadastrar</button>
+
+        <label for="nomeConsulta">Nome:</label>
+        <input type="text" id="nomeConsulta" name="nomeConsulta"><br>
+        <button type="button" onclick="consultarPontoPorNome()">Consultar</button>
+        <button type="button" onclick="limparConsulta()">Limpar</button>
+    </form>
+    <ul id="listaFuncionarios"></ul>
+
+    
     </form>
 </body>
 </html>
